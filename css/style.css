@@ -1,0 +1,365 @@
+
+
+body{
+    background-color: #ebe9eb;
+}
+*{
+    font-family: 'Share Tech', sans-serif;
+}
+.navbar li {
+    margin-right : 1.5vw;
+}
+li{
+    color: red !important;
+}
+
+.container{
+    position: relative;
+}
+.cartao{
+    top: -50vh;
+}
+#cartaoCima{
+    background-color: #ebe9eb;
+    padding: 2em;
+    border: solid black;
+    border-width: 0.1em 0.1em 0 0.1em;
+
+}
+#cartaoBaixo{
+    background-color: #0B486B;
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+    border: solid black;
+    border-width: 0 0.1em 0.1em 0.1em;
+
+}
+.circulo{
+    color: black;
+    border-radius: 0 0.5em 0.5em 0;
+    background-color: #ebe9eb;
+    float: left;
+    height: 1.5em;
+    position: relative;
+    padding-right: 0.1em;
+    z-index: 0;
+    margin-bottom: 1em;
+}
+.simbolo{
+    color: white;
+    position: absolute;
+    z-index: 10;
+    padding: 0.1em;
+}
+.circulo::before{
+    content: "";
+    z-index: 10;
+    float: left;
+    background-color: black;
+    color:white;
+    position: relative;
+    top: -0.5em;
+    left: -0.5em;
+    height: 2.5em;
+    padding-top: 0.5em;
+    width: 2em;
+    text-align: center;
+    border-radius: 50%;
+}
+.redes{
+    z-index: 10;
+    float: left;
+    color:white;
+    position: relative;
+    top: -0.5em;
+    height: 2.5em;
+    padding-top: 0.5em;
+    width: 2em;
+    text-align: center;
+
+}
+#nome{
+    font-size: 3em;
+}
+.card img{
+    max-width: 100%;
+}
+
+#bg-sobre-img{
+    width: 100%;
+    height: 80vh;
+    background-image: url("../img/bg-sobre-img.png");
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    top: 0;
+    z-index: -1;
+}
+.navbar-brand{
+    font-size: 1.8em !important;
+}
+@keyframes animation-colorir {
+    from {
+        background-color: transparent;
+    }
+    to {
+        background-color: #3a8585;
+    }
+}
+@keyframes animation-descolorir {
+    from {
+        background-color: #3a8585;
+    }
+    to {
+        background-color: transparent;
+    }
+}
+@keyframes aumentaH {
+    from {
+        font-size: 1.5rem;
+    }
+    to {
+        font-size: 1.75rem;
+    }
+}
+@keyframes diminuiH {
+    from {
+        font-size: 1.75rem;
+    }
+    to {
+        font-size: 1.5rem;
+    }
+}
+@keyframes selecionaPagina {
+    from {
+        border-style: solid;
+        border-color: transparent;
+        border-width: 0.1em 0 0 0;
+    }
+    to {
+        border-style: solid;
+        border-color: #79bc9a;
+        border-width: 0.1em 0 0 0;
+    }
+}
+.selecionaPagina{
+    animation-name: selecionaPagina;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.colorir-bg{
+    animation-name: animation-colorir;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+.ulAumenta{
+    animation-name: aumentaH;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.ulDiminui{
+    animation-name: diminuiH;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.descolorir-bg{
+    animation-name: animation-descolorir;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.txtCinza{
+    color: #5a6268;
+}
+
+
+@media (min-width: 768px) {
+    .left{
+        margin-top: 2em;
+    }
+    .right::after {
+        left: 100%;
+        top: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-left-color: white;
+        border-width: 1rem;
+        margin-top: -1rem;
+
+    }
+
+    .linhaRight {
+        z-index: 3;
+        left: calc(100% + 2.3rem);
+        top: 50%;
+        position: absolute;
+        content: "";
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 50%;
+        background-color: #A8DBA8;
+        margin-top: -1rem;
+    }
+    .left::after {
+        right: 100%;
+        top: 50%;
+        border: solid transparent;
+        content: "";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-right-color: white;
+        border-width: 1rem;
+        margin-top: -1rem;
+    }
+
+    .linhaLeft{
+        z-index: 3;
+        right: calc(100% + 2.1rem);
+        top: 50%;
+        position: absolute;
+        content: "";
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 50%;
+        background-color: #A8DBA8;
+        margin-top: -1rem;
+    }
+    .left{
+        float: right !important;
+    }
+    .revela{
+        animation-name: revela;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    .revelaInverso{
+        animation-name: revelaInverso;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes revela {
+        to {
+            opacity: 100;
+        }
+        from {
+            opacity: 0;
+        }
+
+    }
+    @keyframes revelaInverso {
+        to {
+            opacity: 0;
+        }
+        from {
+            opacity: 100;
+        }
+
+    }
+    section{
+        opacity: 0;
+    }
+
+}
+.linhaDoTempo{
+    position: absolute;
+    left: calc(50% - 0.3em);
+    top: 0;
+    width: 1em;
+    height: 100%;
+    background-color: #d8ecd8;
+}
+.right,.left{
+    width: calc(100% - 1em);
+}
+.card{
+    border-style: solid;
+    border-width: 0.5em 0 0 0;
+    border-color: #A8DBA8;
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+.timeline{
+    border-color: white;
+    border-style: solid;
+    border-width: 0 0 0 0.5em;
+}
+h1{
+    font-size: 3.3em;
+}
+
+/* FLIP CARD */
+.perspectiva {
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+}
+
+.vira {
+    min-height: calc(320px + 5em);
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+    cursor: pointer;
+}
+.vira div {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.card{
+    max-width: calc(100% - 1em);
+}
+.vira .back {
+
+    width: 100%;
+    position: absolute;
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+.vira.flipped {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+.red{
+    color: red;
+    font-size: 1rem !important;
+}
+
+svg path:last-child:hover{
+    animation-name: graficos;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes graficos {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+
+}
+
+
+.nav-link{
+    cursor: pointer;
+}
