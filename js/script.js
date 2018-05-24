@@ -1,10 +1,10 @@
 function checkScroll(){
     //para mudar orientção de em qual página user está
-    var sobre = ($("#cartaoBaixo").position().top + $("#cartaoBaixo").height()) - 200;
-    var objetivos = ($("#objetivosSection").position().top + $("#objetivosSection").height())  - 200;
-    var qualificacoes = ($("#qualificacoesSection").position().top + $("#qualificacoesSection").height())  - 200;
-    var experiencias = ($("#experienciasSection").position().top + $("#experienciasSection").height()) - 200;
-    var curiosidades = ($("#curiosidadesSection").position().top + $("#curiosidadesSection").height()) - 200;
+    var sobre = ($("#cartaoBaixo").position().top + $("#cartaoBaixo").height()) - 250;
+    var objetivos = ($("#objetivosSection").position().top + $("#objetivosSection").height())  - 250;
+    var qualificacoes = ($("#qualificacoesSection").position().top + $("#qualificacoesSection").height())  - 250;
+    var experiencias = ($("#experienciasSection").position().top + $("#experienciasSection").height()) - 250;
+    var curiosidades = ($("#curiosidadesSection").position().top + $("#curiosidadesSection").height()) - 250;
     var posicoes = [sobre,objetivos,qualificacoes,experiencias,curiosidades];
     var ids = ["#sobre","#objetivos","#qualificacoes","#experiencias","#curiosidades"];
     var anterior = 0;
@@ -27,7 +27,7 @@ function checkScroll(){
 
 
     //para colorir nav
-    var startY = $('.navbar').height() *2; //The point where the navbar changes in px
+    var startY = $('.navbar').height() *2;
 
     if(($(window).scrollTop() > startY) || ($(window).width()<=992)){
         $('.navbar').addClass("colorir-bg");
@@ -52,7 +52,7 @@ $(document).ready(function () {
     });
     $(".nav-link").click(function () {
         var str = "#"+$(this).attr('id') +"Section";
-        var pos = $(str).position().top - ($("nav").height() + 10);
+        var pos = $(str).position().top - ($(".navbar-brand").height() + 50);
 
        $('html, body').animate({
            scrollTop: pos
