@@ -161,37 +161,23 @@ li{
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
-@media (max-width: 768px) {
-    @keyframes selecionaPagina {
-        from {
-            border-style: solid;
-            border-color: transparent;
-            border-width: 0 0.1em 0 0;
-        }
-        to {
-            border-style: solid;
-            border-color: #79bc9a;
-            border-width: 0.1em 0 0 0;
-        }
 
+@keyframes selecionaPagina {
+    from {
+        border-style: solid;
+        border-color: transparent;
+        border-width: 0 0 0 0;
+    }
+    to {
+        border-style: solid;
+        border-color: #79bc9a;
+        border-width: 0 0 0.1em 0;
     }
 
 }
 
 @media (min-width: 768px) {
-    @keyframes selecionaPagina {
-        from {
-            border-style: solid;
-            border-color: transparent;
-            border-width: 0.1em 0 0 0;
-        }
-        to {
-            border-style: solid;
-            border-color: #79bc9a;
-            border-width: 0.1em 0 0 0;
-        }
 
-    }
     .left{
         margin-top: 2em;
     }
