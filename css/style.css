@@ -130,23 +130,8 @@ li{
         font-size: 1.5rem;
     }
 }
-@keyframes selecionaPagina {
-    from {
-        border-style: solid;
-        border-color: transparent;
-        border-width: 0.1em 0 0 0;
-    }
-    to {
-        border-style: solid;
-        border-color: #79bc9a;
-        border-width: 0.1em 0 0 0;
-    }
-}
-.selecionaPagina{
-    animation-name: selecionaPagina;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
+
+
 .colorir-bg{
     animation-name: animation-colorir;
     animation-duration: 1s;
@@ -171,9 +156,42 @@ li{
 .txtCinza{
     color: #5a6268;
 }
+.selecionaPagina{
+    animation-name: selecionaPagina;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@media (max-width: 768px) {
+    @keyframes selecionaPagina {
+        from {
+            border-style: solid;
+            border-color: transparent;
+            border-width: 0 0.1em 0 0;
+        }
+        to {
+            border-style: solid;
+            border-color: #79bc9a;
+            border-width: 0.1em 0 0 0;
+        }
 
+    }
+
+}
 
 @media (min-width: 768px) {
+    @keyframes selecionaPagina {
+        from {
+            border-style: solid;
+            border-color: transparent;
+            border-width: 0.1em 0 0 0;
+        }
+        to {
+            border-style: solid;
+            border-color: #79bc9a;
+            border-width: 0.1em 0 0 0;
+        }
+
+    }
     .left{
         margin-top: 2em;
     }
@@ -191,6 +209,7 @@ li{
         margin-top: -1rem;
 
     }
+
 
     .linhaRight {
         z-index: 3;
